@@ -1,10 +1,5 @@
 # Based GA
-High performance and lightweight genetic algorithm implementation.
-
-## Features
-- Multi-threaded
-- Flexible
-- Small source size
+High performance (multithreaded) and lightweight genetic algorithm implementation.
 
 ![epic screenshot](./screenshot.png)
 
