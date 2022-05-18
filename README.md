@@ -32,4 +32,4 @@ std::array<long double, param_c> based_ga::train(
 - **`thread_c`** - Number of threads to use. Defaults to `1`.
 
 ## Why is it based?
-I did not implement crossing over.
+I did not implement crossing over. (No sexual reproduction)
