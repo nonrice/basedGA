@@ -1,7 +1,7 @@
 # Based GA
 High performance and lightweight genetic algorithm implementation.
 
-**Features:**
+## Features
 - Multi-threaded
 - Flexible
 - Small source size
