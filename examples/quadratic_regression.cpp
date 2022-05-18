@@ -10,7 +10,7 @@ class Graph {
     public:
     static std::vector<std::pair<ld, ld>> data;
     
-    // Given quadratic equation ax^2 + bx + c, return the MSE when fitted to points in Model::data
+    // Given quadratic equation ax^2 + bx + c, return the MSE when fitted to points in Graph::data
     static ld quadeq_mse(const std::array<ld, 3>& params){
         ld error = 0;
         for (const auto& pt : data){
