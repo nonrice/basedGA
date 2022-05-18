@@ -26,7 +26,6 @@ std::array<ld, param_c> based_ga::train(
     while (gen_c--){
         
         for (ull idx=0; idx<thread_c; ++idx){
-            // idx is passed by value so it won't change/freed during thread execution
             threads.emplace_back([&](ull idx) {
 
                 std::array<ld, param_c> cur = {0};
@@ -49,7 +48,7 @@ std::array<ld, param_c> based_ga::train(
             if (t.joinable()) t.join();
         threads.clear();
 
-        // use the first result to just hold the best out of all results
+        // first result holds the running min of all results
         for (auto& res : results){
             if (res.first < results[0].first)
                 results[0] = res;
