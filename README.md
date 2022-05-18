@@ -8,10 +8,10 @@ High performance and lightweight genetic algorithm implementation.
 
 ![epic screenshot](./screenshot.png)
 
-### Installation
+## Installation
 Simply copy `based_ga.cpp` and `based_ga.hpp` into your project source, or make your compiler aware of them. Use `#include "based_ga.hpp"`in your files.
 
-### Usage
+## Usage
 **One function. It's that simple.**
 ```cpp
 template <std::size_t param_c>
@@ -31,5 +31,5 @@ std::array<long double, param_c> based_ga::train(
 - **`var`** - Maximum variance when mutating child "genes".
 - **`thread_c`** - Number of threads to use. Defaults to `1`.
 
-### Why is it based?
+## Why is it based?
 I did not implement crossing over.
