@@ -49,12 +49,13 @@ std::array<ld, param_c> based_ga::train(
         threads.clear();
 
         // first result holds the running min of all results
-        for (auto& res : results){
-            if (res.first < results[0].first)
-                results[0] = res;
+        auto bst = results.begin();
+        for (auto it=results.begin(); it!=results.end(); ++it){
+            if (*it.first < *bst.first)
+                bst = it;
         }
 
-        cur_parent = results[0].second;
+        cur_parent = *bst.second;
     }
 
     return results[0].second;
