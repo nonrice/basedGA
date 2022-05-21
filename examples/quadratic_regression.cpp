@@ -2,6 +2,7 @@
 #include <array>
 #include <cmath>
 
+#define BASEDGA_VERBOSE 1
 #include "based_ga.hpp"
 
 #define ld long double
@@ -24,8 +25,7 @@ class Graph {
         return error / (sizeof(data) / (sizeof(ld)*2));
     }
 };
-
-
+std::vector<std::pair<ld, ld>> Graph::data;
 
 int main(){
     Graph::data = {
@@ -39,7 +39,7 @@ int main(){
     std::array<ld, 3> fit = based_ga::train<3>(
         std::function(Graph::quadeq_mse),
         100, // generation count
-        100, // children/generation
+        10000, // children/generation
         0.5, // max variation
         8 // thread count
     );
