@@ -25,7 +25,6 @@ inline std::array<ld, param_c> train(
     std::array<ld, param_c> cur_parent = {0};
 
     for (ull gen=1; gen<=gen_c; ++gen){
-        
         for (ull idx=0; idx<thread_c; ++idx){
             threads.emplace_back([&](ull idx) {
 
@@ -54,7 +53,6 @@ inline std::array<ld, param_c> train(
             if (it->first < bst->first)
                 bst = it;
         }
-
         cur_parent = bst->second;
 
         #ifdef BASEDGA_VERBOSE
