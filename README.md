@@ -4,7 +4,7 @@ High performance (multithreaded) and lightweight genetic algorithm implementatio
 ![epic screenshot](./screenshot.png)
 
 ## Installation
-Simply copy `based_ga.cpp` and `based_ga.hpp` into your project source, or make your compiler aware of them. Use `#include "based_ga.hpp"`in your files.
+Copy `based_ga.hpp` into your source or your compiler's include path.
 
 ## Usage
 **One function. It's that simple.**
@@ -25,6 +25,9 @@ std::array<long double, param_c> based_ga::train(
 - **`child_c`** - No. of children/generation.
 - **`var`** - Maximum variance when mutating child "genes".
 - **`thread_c`** - Number of threads to use. Defaults to `1`.
+
+## Why `inline` and no separate header/implementation?
+This is not possible with template functions, and common workarounds do not work well with my needs. Besides, it is not likely that this project's functions will be used on several occasions, so `inline` is completely fine.
 
 ## Why is it based?
 I did not implement crossing over. (No sexual reproduction)
