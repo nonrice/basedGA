@@ -20,7 +20,7 @@ std::array<long double, param_c> based_ga::train(
 ```
 **`based_ga::train`**: Returns optimal parameters for a function `eval`.
 - **`param_c`** - Parameter count for the target function. Needed because `std::array` size must be known at compile time.
-- **`eval`** - `std::function` object for the target function. Must take in `const std::array<long double, param_c>&` and return `long double`. **Note that `based_ga::train` MINIMIZES this return value.**
+- **`eval`** - `std::function` object for the target function. Must take in `const std::array<long double, std::size_t>&` and return `long double`. **Note that `based_ga::train` MINIMIZES this return value.**
 - **`gen_c`** - No. of generations.
 - **`child_c`** - No. of children/generation.
 - **`var`** - Maximum variance when mutating child "genes".
