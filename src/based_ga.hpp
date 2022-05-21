@@ -63,7 +63,7 @@ inline std::array<ld, param_c> train(
         #endif 
     }
 
-    return results[0].second;
+    return cur_parent;
 }
 
 }
