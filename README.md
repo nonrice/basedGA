@@ -7,7 +7,7 @@ High performance (multithreaded) and lightweight genetic algorithm implementatio
 Copy `based_ga.hpp` into your source or your compiler's include path.
 
 ## Usage
-**One function. It's that simple.**
+**One function:**
 ```cpp
 template <std::size_t param_c>
 std::array<long double, param_c> based_ga::train(
